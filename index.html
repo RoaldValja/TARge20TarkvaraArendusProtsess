@@ -20,10 +20,10 @@
     <h6>uuendus</h6>
 
     <script>
-        let colors = ["blue", "red", "yellow", "green", "orange", "white", "black", "cyan", "beige", "gray"];
+        let colors = ["blue", "red", "yellow", "green", "white", "black", "cyan", "beige", "gray", "purple", "violet", "orange"];
         let i = 0;
         function myFunction() {
-            setTimeout(function(){ document.querySelector("#test2").style.backgroundColor = colors[i++]; if(i == 10){i = 0;} myFunction() }, 100);
+            setTimeout(function(){ document.querySelector("body").style.backgroundColor = colors[i++]; if(i == 12){i = 0;} myFunction() }, 100);
         }
     </script>
 </body>
