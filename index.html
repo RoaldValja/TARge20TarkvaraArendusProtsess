@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+</head>
+<body id="test2">
+    <h1 id="test" style="">Main Page</h1>
+    <hr>
+    <ul>
+        <li>
+            <a href="models/models.html">Models</a>
+        </li>
+    </ul>
+    <button onclick="myFunction()">Rave party!!!!!</button>
+
+    <script>
+        let colors = ["blue", "red", "yellow", "green", "orange", "white", "black", "cyan", "beige", "gray"];
+        let i = 0;
+        function myFunction() {
+            setTimeout(function(){ document.querySelector("#test2").style.backgroundColor = colors[i++]; if(i == 10){i = 0;} myFunction() }, 100);
+        }
+    </script>
+</body>
+</html>
