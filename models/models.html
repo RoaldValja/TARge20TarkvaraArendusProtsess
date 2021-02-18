@@ -18,6 +18,34 @@
         <li><a href="extremeProgramming.html">Extreme Programming</a></li>
         <li><a href="kanban.html">kanban</a></li>
     </ul>
-    
+    <img id="pogPic" style="position: absolute; top: 100; right: 2000;" src="../images/pog2.jpg" alt="pog">
+    <script>
+        let x = 2000;
+        let side = "right";
+        movePog(x);
+        
+        function movePog(coordinate){
+            setTimeout(function(){
+                if(coordinate == 0){
+                    side = "left";
+                } else if(coordinate == 2000){
+                    side = "right";
+                }
+                let pog = document.querySelector("#pogPic");
+                const rect = pog.getBoundingClientRect();
+                console.log(pog.style.right);
+                if(side == "left"){
+                    coordinate += 4;
+                }
+                else{
+                    coordinate -= 4;
+                }
+                console.log(coordinate);
+                pog.style.right = coordinate + "px";
+                console.log("pog liigub");
+                movePog(coordinate);
+            }, 50);
+        }
+    </script>
 </body>
 </html>
