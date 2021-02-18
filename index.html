@@ -21,20 +21,39 @@
     <div id="snake">snake</div>
 
     <script>
+        let x = 0;
+        let side = "left";
+        moveSnake(x);
         let colors = ["blue", "red", "yellow", "green", "white", "black", "cyan", "beige", "gray", "purple", "violet", "orange"];
         let i = 0;
         function myFunction() {
-            setTimeout(function(){ document.querySelector("body").style.backgroundColor = colors[i++]; if(i == 12){i = 0;} myFunction() }, 100);
-        }
-        /*
-        function moveSnake(){
             setTimeout(function(){
+                 document.querySelector("body").style.backgroundColor = colors[i++]; if(i == 12){i = 0;} myFunction() 
+                }, 100);
+        }
+        
+        function moveSnake(coordinate){
+            setTimeout(function(){
+                if(coordinate == 0){
+                    side = "left";
+                } else if(coordinate == 1500){
+                    side = "right";
+                }
                 let snake = document.querySelector("#snake");
                 const rect = snake.getBoundingClientRect();
-                rect.right += 1px;
-                moveSnake();
-            })
-        }*/
+                console.log(snake.style.right);
+                if(side == "left"){
+                    coordinate += 4;
+                }
+                else{
+                    coordinate -= 4;
+                }
+                console.log(coordinate);
+                snake.style.right = coordinate + "px";
+                console.log("snake liigub");
+                moveSnake(coordinate);
+            }, 1);
+        }
     </script>
 </body>
 </html>
