@@ -18,7 +18,7 @@
     </ul>
     <button onclick="myFunction()">Rave party!!!!!</button>
     <h6>uuendus</h6>
-    <div id="snake">snake</div>
+    <div id="snake">&#9729;</div>
 
     <script>
         let x = 0;
@@ -48,6 +48,12 @@
                 else{
                     coordinate -= 4;
                 }
+                if(coordinate % 4 == 1){
+                 i++;
+                 console.log("muuda värv");
+                }
+                if(i == 12){i = 0;}
+                snake.style.backgroundColor = colors[i];
                 console.log(coordinate);
                 snake.style.right = coordinate + "px";
                 console.log("snake liigub");
