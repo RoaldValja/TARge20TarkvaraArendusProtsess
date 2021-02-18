@@ -18,12 +18,21 @@
     </ul>
     <button onclick="myFunction()">Rave party!!!!!</button>
     <h6>uuendus</h6>
+    <div id="snake">snake</div>
 
     <script>
         let colors = ["blue", "red", "yellow", "green", "white", "black", "cyan", "beige", "gray", "purple", "violet", "orange"];
         let i = 0;
         function myFunction() {
             setTimeout(function(){ document.querySelector("body").style.backgroundColor = colors[i++]; if(i == 12){i = 0;} myFunction() }, 100);
+        }
+        function moveSnake(){
+            setTimeout(function(){
+                let snake = document.querySelector("#snake");
+                const rect = snake.getBoundingClientRect();
+                rect.right += 1px;
+                moveSnake();
+            })
         }
     </script>
 </body>
