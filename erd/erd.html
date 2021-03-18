@@ -72,6 +72,8 @@
 
     <h2>Fridge Database</h2>
 
+    <p><a href="https://github.com/RoaldValja/FridgeDBApp" target="_blank">My FridgeDB App</a></p>
+
     <button id="myBtn">Open ERD</button>
 
     <div id="myModal" class="modal">
@@ -86,15 +88,27 @@
             <h4>Table FoodType</h4>
             <ul>
                 <li>Descriptions of what the table means and how it's functionally used (in the UI, etc.)</li>
+                <p>FoodType tabel sisaldab kahte veergu: Id ja TypeName. Tabel FoodType sisaldab ainult andmeid toitude tüüpide kohta.</p>
                 <li>Descriptions of what each attribute means</li>
+                <p>Id on tabeli FoodType peamine võti ja ta on <i>int</i> tüüpi atribuut, mis võtab ainult täisarvulisi sisendeid. Sisend ei tohi olla tühi.</p>
+                <p>TypeName on <i>varchar</i> tüüpi atribuut, mis võtab kuni 50 märgi suurust sisendit. Antud tabelis on ta toidu tüübi nimi.</p>
                 <li>Explanations of the relationships (foreign keys) from this table to others, and vice-versa</li>
+                <p>Tabel FoodType ei sisalda mingeid võõrvõtmeid, aga tema Id on võõrvõti tabelile FoodInTheFridge.</p>
+                <p>Tabeli FoodType tüüp võib olla sama mitmel erineval toidul külmkapis ja võib olla ka mitteühelgi toidu tüüp külmkapis.</p>
             </ul>
 
             <h4>Table FoodInTheFridge</h4>
             <ul>
                 <li>Descriptions of what the table means and how it's functionally used (in the UI, etc.)</li>
+                <p>FoodInTheFridge tabel sisaldab kolme veergu: Id, Name ja TypeID. Tabel FoodInTheFridge sisaldab andmeid sellest, milliseid toitusid külmkapis hetkel hoitakse.</p>
+                <p>FoodInTheFridge tabel kasutab FoodType tabelit, et teada saada millist tüüpi on külmkapis olev toit.</p>
                 <li>Descriptions of what each attribute means</li>
+                <p>Id on tabeli FoodInTheFridge peamine võti ja ta on <i>int</i> tüüpi atribuut, mis võtab ainult täisarvulisi sisendeid. Sisend ei tohi olla tühi.</p>
+                <p>Name on <i>varchar</i> tüüpi atribuut, mis võtab kuni 50 märgi suurust sisendit. Antud tabelis on ta toidu nimi.</p>
+                <p>TypeId on <i>int</i> tüüpi atribuut ja FoodInTheFridge võõrvõti, mis viitab FoodType tabelile. Ta võtab ainult täisarvulisi sisendeid, mis on juba olemas FoodType tabelis.</p>
                 <li>Explanations of the relationships (foreign keys) from this table to others, and vice-versa</li>
+                <p>Tabel FoodInTheFridge sisaldab võõrvõtit TypeId, mis viitab tabeli FoodType Id-le.</p>
+                <p>Tabeli FoodInTheFridge toit võib olla ainult ühte toidu tüüpi.</p>
             </ul>
         </div>
 
