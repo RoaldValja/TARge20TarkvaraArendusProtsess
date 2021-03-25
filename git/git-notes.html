@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        code {
+            background-color: black;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    </style>
+    <title>Git and GitHub</title>
+</head>
+<body>
+    <div>
+        <h1>Git initialize</h1>
+        <p>Git is a version control system that allows us to manage our source code history. Git is a local tool. <br>
+        Repository is the location where the projects code history is stored. Branches are inside the repository, which are like folders that contain commits.
+        Commits are different stages of the project code inside a branch that we save. <br>
+        Version control allows us to manage different versions of our code in an efficient and easy to maintain way.</p>
+
+        <h2>Command</h2>
+        <code>$git init</code>
+        <p>Initializes a local Git repository</p>
+        <h2>Command</h2>
+        <code>$git status</code>
+        <p>Shows untracked files and tracked changes in the local repository.</p>
+        <h2>Command</h2>
+        <code>$git add .</code>
+        <p>Adds all new files and changed files to the tracking logic of Git.</p>
+        <h2>Command</h2>
+        <code>$git add index.html</code>
+        <p>Adds only the file index.html</p>
+        <h2>Command</h2>
+        <code>git commit -m "message"</code>
+        <p>Saves current changes into the current branch with the name message.</p>
+    </div>
+    <hr>
+
+    <div>
+        <h1>Branching</h1>
+        <p>All repositories have branches where all commits are kept. Branches are typically used to create new experimental code that doesn't break the main code before it has been finished and released. Branches contain commit information on who commited them, when it was commited and on what branch the commit was made on. Branches can also be merged, but if they contain conflicts, then those conflicts have to be resolved before finally committing.</p>
+
+        <h2>Command</h2>
+        <code>$git branch</code>
+        <p>Show what branches are in the local repository.</p>
+        <h2>Command</h2>
+        <code>$git log</code>
+        <p>Show information about commits like who committed, when was committed and commit name.</p>
+        <h2>Command</h2>
+        <code>$git master</code>
+        <p>Go into the master branch</p>
+        <h2>Command</h2>
+        <code>$git checkout id</code>
+        <p>Change current commit head to the one with id. Any changes made in this commit won't be saved in the previous branch.</p>
+        <h2>Command</h2>
+        <code>$git checkout -b experimental</code>
+        <p>Create a new branch named experimental.</p>
+        <h2>Command</h2>
+        <code>$git merge experimental</code>
+        <p>Merge branch experimental with the branch you are currently in.</p>
+
+    </div>
+    <hr>
+    <div>
+        <h1>Branch and commit deletion</h1>
+        <p>You are able to delete commits until a selected commit. Entire branches can be deleted. It's also possible to revert any changes done that haven't been commited into git yet. You have to be careful with deletion, because these changes can't be reversed.</p>
+        
+        <h2>Command</h2>
+        <code>$git reset --hard id</code>
+        <p>Revert code back into the state it was in commit with written id.</p>
+        <h2>Command</h2>
+        <code>$git checkout -- .</code>
+        <p>Revert code back to what it was after last commit.</p>
+        <h2>Command</h2>
+        <code>$git branch -D experimental</code>
+        <p>Delete branch experimental</p>
+    </div>
+    <hr>
+    <div>
+        <h1>GitHub Repository</h1>
+        <p>GitHub is a hosting and collaboration provider, which has a purpose to host git repository. GitHub is a web based solution. Git repositories can be pushed into GitHubs, which allows other people to access your code and collaborate in your projects. GitHub is located at the link <a href="www.github.com">github.com</a>.</p>
+
+        <h2>Command</h2>
+        <code>$git remote add origin name@github.git</code>
+        <p>Add and connect a remote repository name@github.git to your local repository.</p>
+        <h2>Command</h2>
+        <code>$git remote -v</code>
+        <p>Check remote repositories.</p>
+        <h2>Command</h2>
+        <code>$git push -u origin master</code>
+        <code>$git push</code>
+        <p>Push locak repository changes into remote repository. If the upper code is inserted, then in the consecutive times you only need to use the lower code to push code. Origin is the repository code is being pushed into. Master is the local branch from where code is being pushed from.</p>
+        <h2>Command</h2>
+        <code>$git remote</code>
+        <p>Check connected remote repository</p>
+        <h2>Command</h2>
+        <code>$git branch -r</code>
+        <p>Show connection between remote and local repositories.</p>
+    </div>
+    <hr>
+    <div>
+        <h1>GitHub clone, pull and remove</h1>
+        <p>In order for other colleagues to program your code, they will have to clone your repository. When there is more than 1 programmer in a project, you will need to pull any changes the other colleagues have done to be up to date with your project. GitHub remote repository connections can also be removed from your local repository.</p>
+
+        <h2>Command</h2>
+        <code>$git clone name@github.git</code>
+        <p>Clone the remote repository to a local folder.</p>
+        <h2>Command</h2>
+        <code>$git fetch</code>
+        <p>Download changes made by other programmers and review the changes before merging.</p>
+        <h2>Command</h2>
+        <code>$git pull</code>
+        <p>Combination of commands <code>git fetch</code> and <code>git merge</code>. Download changes into local repository.</p>
+        <h2>Command</h2>
+        <code>git remote rm origin</code>
+        <p>Delete connection to remote repository origin.</p>
+    </div>
+</body>
+</html>
