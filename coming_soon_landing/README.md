@@ -1,87 +1,49 @@
-<!-- Headings -->
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+# Coming Soon
+## Purpose
 
-<!-- Italics -->
-*\*This text\** is italic
+Coming Soon web page should display a countdown towards the release date of this page.
 
-_This text_ is italic
+## User personas
 
-<!-- Strong -->
-**This text** is strong
+* Customer
+* Developer
+* Owner
 
-__This text__ is strong
+## User stories
 
-<!-- Strikethrough -->
-~~This text~~ is strikethrough
+* Customer checks the web page for when the site is ready for use.
+* Developer checks the web page to know how much time he has to finish the features.
+* Owner checks the web page to know when he can promote the new site.
 
-<!-- Horizontal Rule -->
+## Website structure
 
----
+* [Home Page](../index.html)
+    * [Models Page](../models/index.html)
+    * [UML Page](../uml/index.html)
+    * [ERD Page](../erd/index.html)
+    * [Git and GitHub](../git/index.html)
+    * [Coming Soon](index.html)
 
-___
+## Page description
 
-<!-- Blockquote -->
-> This is a quote
+Web page displays the logo, title of the page, a paragraph telling that its coming soon and shows how much time is left until the page gets released. Time is seperated into days, hours, minutes and seconds.
+If the web page timer reaches 0 and the page hasn't been updated yet, it should display 'Released' in plain text.
 
-<!-- Links -->
-[Traversy Media](http://www.traversymedia.com)
+## Wireframes
 
-[Traversy Media](http://www.traversymedia.com
-"Traversy Media")
+* Widescreen layout
+    * Logo should be at the top center of the screen.
+    * Title and coming soon text should be below the logo.
+    * Days, hours, minutes and seconds blocks should be below coming soon and be situated next to each other in the same order.
+* 650 pixels wide layout
+    * Logo resizes with browser width.
+    * timer displays only days.
+* 600 pixels high layout
+    * Title disappears.
+* 400 pixels high layout
+    * Coming soon text disappears.
 
-<!-- UL -->
-* Item 1
-* Item 2
-* Item 3
-    * Nested Item 1
-    * Nested Item 2
-
-<!-- OL -->
-1. Item 1
-1. Item 2
-1. Item 3
-
-<!-- Inline Code Block -->
-`<p>This is a paragraph</p>`
-
-<!-- Image -->
-![Markdown Logo](https://markdown-here.com/img/icon256.png)
-
-<!-- Github Markdown -->
-
-<!-- Code Blocks -->
-
-```bash
-    npm install
-
-    npm start
-```
-
-```javascript
-    function add(num1, num2) {
-        return num1 + num2;
-    }
-```
-
-```python
-    def add(num1, num2):
-        return num1 + num2
-```
-
-<!-- Tables -->
-
-| Name     | Email          |
-| -------- | -------------- |
-| John Doe | john@gmail.com |
-| Jane Doe | jane@gmail.com |
-
-<!-- Task Lists -->
-
-* [x] Task 1
-* [x] Task 2
-* [ ] Task 3
+## Non-functional requirements
+* Responsive design with specific width and height of browser.
+* Support every browser.
+* Be able to handle 100 visitors at a time.
