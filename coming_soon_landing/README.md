@@ -18,10 +18,10 @@ Coming Soon web page should display a countdown towards the release date of this
 ## Website structure
 
 * [Home Page](../index.html)
-    * [Models Page](../models/index.html)
-    * [UML Page](../uml/index.html)
-    * [ERD Page](../erd/index.html)
-    * [Git and GitHub](../git/index.html)
+    * [Models Page](../models/models.html)
+    * [UML Page](../uml/umls.html)
+    * [ERD Page](../erd/erd.html)
+    * [Git and GitHub](../git/git-notes.html)
     * [Coming Soon](index.html)
 
 ## Page description
